@@ -1,0 +1,18 @@
+{
+  "codigo" : "dam2",
+  "nombre" : "Desarrollo de Aplicaciones",
+  "año" : 2025,
+  "alumnos" : [ {
+    "nombre" : "Manolo",
+    "apellidos" : "García",
+    "fechaNacimiento" : [ 2025, 5, 15 ]
+  }, {
+    "nombre" : "Ana",
+    "apellidos" : "Quiralte",
+    "fechaNacimiento" : [ 2002, 6, 22 ]
+  }, {
+    "nombre" : "Antonio",
+    "apellidos" : "Martínez",
+    "fechaNacimiento" : [ 2000, 1, 13 ]
+  } ]
+}

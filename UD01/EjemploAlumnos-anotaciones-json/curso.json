@@ -1,0 +1,21 @@
+{
+  "nombre" : "Desarrollo de Aplicaciones",
+  "año" : 2025,
+  "alumnos" : [ {
+    "nombre" : "Manolo",
+    "apellidos" : "García",
+    "fechaNacimiento" : "2000-01-16",
+    "id_alumno" : 1
+  }, {
+    "nombre" : "Ana",
+    "apellidos" : "Quiralte",
+    "fechaNacimiento" : "2002-04-18",
+    "id_alumno" : 2
+  }, {
+    "nombre" : "Antonio",
+    "apellidos" : "Pérez",
+    "fechaNacimiento" : "2003-05-06",
+    "id_alumno" : 3
+  } ],
+  "cod" : "dam2"
+}
