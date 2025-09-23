@@ -25,14 +25,11 @@
 
 ## UD02. Manejo de conectores de acceso a base de datos relacionales
 
-1. Introducción. Desfase objeto-relacional. Usos
+1. Introducción.
 2. Arquitectura. Funcionamiento. Conectores
 3. Establecimiento de conexiones a bases de datos relacionales: Driver, URLs, Clases `Connection`, ...
-   - **3.1.** BDR embebidas: SQLite, H2, Apache Derby, HSQLDB
-   - **3.2.** BDR cliente/servidor: Oracle
-   - **3.3.** MySQL
 4. Operaciones con BDR desde Java
-   - **4.1.** Consulta de metadatos: Clase `DatabaseMetaData`, Interfaz `ResultMetaData`
-   - **4.2.** Ejecución de sentencias SQL: Interfaces `Statement`, `PreparedStatement`, `ResultSet`, ...
-   - **4.3.** Ejecución de procedimientos: Interfaz `CallableStatement`
-5. Gestión de errores
+   - **4.1.** Ejecución de sentencias SQL: Interfaces `Statement`, `PreparedStatement`, `ResultSet`, ...
+   - **4.2.** Manejo de Excepciones
+   - **4.3.** Manejo de Transacciones
+5. Patrón DAO
