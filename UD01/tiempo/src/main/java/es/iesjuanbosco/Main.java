@@ -4,12 +4,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import es.iesjuanbosco.PronosticoUtils;
+import es.iesjuanbosco.modelo.Pronostico;
+import es.iesjuanbosco.service.PronosticoUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 
@@ -29,7 +28,7 @@ public class Main {
                 int opcion;
                 String dia;
                do {
-                   opcion=PronosticoUtils.menu();
+                   opcion= PronosticoUtils.menu();
                    switch(opcion)
                    {
                    case 1: dia=PronosticoUtils.pedirDia();PronosticoUtils.mostrarPronosticoPorDia(pronostico,dia); break;

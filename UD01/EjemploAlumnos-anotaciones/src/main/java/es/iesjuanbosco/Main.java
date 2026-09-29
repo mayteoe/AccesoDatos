@@ -28,7 +28,7 @@ public class Main {
         xmlMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
 
         xmlMapper.writeValue(new File("curso-anotaciones.xml"), curso);
-        System.out.println("Creado el fichero curso.xml");
+        System.out.println("Cread el fichero curso.xml");
         Curso cursoLeido = xmlMapper.readValue(new File("curso.xml"),Curso.class);
         System.out.println("curso:"+ cursoLeido.getNombre() + ", Código: " + cursoLeido.getCodigo() + ", año: " + cursoLeido.getAño()  );
         for (Alumno alumno: cursoLeido.getAlumnos()){

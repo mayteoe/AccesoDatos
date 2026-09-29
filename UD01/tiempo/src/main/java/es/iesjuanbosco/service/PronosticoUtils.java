@@ -1,4 +1,7 @@
-package es.iesjuanbosco;
+package es.iesjuanbosco.service;
+import es.iesjuanbosco.modelo.Pronostico;
+import es.iesjuanbosco.modelo.Tiempo;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;

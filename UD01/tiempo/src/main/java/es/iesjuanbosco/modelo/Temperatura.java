@@ -1,4 +1,4 @@
-package es.iesjuanbosco;
+package es.iesjuanbosco.modelo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
