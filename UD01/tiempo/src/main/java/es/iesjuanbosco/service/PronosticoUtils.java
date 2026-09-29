@@ -78,6 +78,17 @@ public class PronosticoUtils {
             System.out.println("------------------------------");
         }
     }
+    public static void mostrarMediaDelDia(Pronostico pronostico) {
+        String diaBuscado= pedirDia();
+
+        try {
+
+            double media = calcularMediaDelDia(pronostico, diaBuscado);
+            System.out.printf("La media de temperatura para el día %s es: %.2f°C%n", diaBuscado, media);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
     public static int menu(){
         Scanner scanner = new Scanner(System.in);
@@ -87,9 +98,10 @@ public class PronosticoUtils {
             System.out.println("1. Mostrar pronóstico para un día específico");
             System.out.println("2. Mostrar pronóstico para los próximos 5 días");
             System.out.println("3. Mostrar pronostico completo");
-            System.out.println("4. Salir");
-            System.out.print("Seleccione una opción (1-4): ");
-        } while (!scanner.hasNextInt() || (opcion = scanner.nextInt()) < 1 || opcion > 4);
+            System.out.println("4. Calcular media de temperatura") ;
+            System.out.println("5. Salir");
+            System.out.print("Seleccione una opción (1-5): ");
+        } while (!scanner.hasNextInt() || (opcion = scanner.nextInt()) < 1 || opcion > 5);
         return opcion;
 
     }
@@ -101,4 +113,25 @@ public class PronosticoUtils {
         return dia;
     }
 
+
+
+public static double calcularMediaDelDia(Pronostico pronostico, String dia) {
+    double suma = 0;
+    int cantidad = 0;
+
+    for (Tiempo tiempo : pronostico.getPronostico().getListaTiempo()) {
+        if (tiempo.getFechaIni().toLocalDate().equals(LocalDate.parse(dia, FECHA_FORMATO))
+                && tiempo.getTemperatura() != null
+                && tiempo.getTemperatura().getValue() != null) {
+            suma += tiempo.getTemperatura().getValue();
+            cantidad++;
+        }
+    }
+
+    if (cantidad == 0) {
+        throw new IllegalArgumentException("No hay temperaturas para ese día");
+    }
+
+    return suma / cantidad;
+}
 }

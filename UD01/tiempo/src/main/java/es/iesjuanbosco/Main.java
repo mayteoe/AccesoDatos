@@ -9,6 +9,7 @@ import es.iesjuanbosco.service.PronosticoUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 
@@ -34,10 +35,12 @@ public class Main {
                    case 1: dia=PronosticoUtils.pedirDia();PronosticoUtils.mostrarPronosticoPorDia(pronostico,dia); break;
                    case 2:PronosticoUtils.mostrarPronostico5Dias(pronostico); break;
                    case 3: PronosticoUtils.mostrarPronosticoCompleto(pronostico); break;
+                   case 4: PronosticoUtils.mostrarMediaDelDia(pronostico); break;
+
 
                    }
 
-               }while(opcion<4);
+               }while(opcion<5);
 
             } else {
                 System.out.println("No se encontraron datos de forecast en el XML.");
